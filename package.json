@@ -1,0 +1,23 @@
+{
+  "name": "antd.css",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "predev": "ts-node --project ./tsconfig.node.json ./scripts/genAntdCss.tsx",
+    "prebuild": "ts-node --project ./tsconfig.node.json ./scripts/genAntdCss.tsx",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@ant-design/static-style-extract": "^1.0.1",
+    "@types/node": "^18.15.11",
+    "antd": "^5.3.3",
+    "react": "18.x",
+    "react-dom": "18.x",
+    "ts-node": "^10.9.1",
+    "tslib": "^2.5.0",
+    "typescript": "^5.0.2"
+  }
+}
