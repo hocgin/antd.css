@@ -7,7 +7,7 @@ import {ConfigProvider} from 'antd';
 const outputPath = './public/antd.min.css';
 
 const css = extractStyle(node => <>
-    <ConfigProvider theme={{hashed: false}}>{node}</ConfigProvider>
+    <ConfigProvider theme={{hashed: false, token: {colorPrimary: '#262626'}}}>{node}</ConfigProvider>
 </>);
 
 fs.writeFileSync(outputPath, css);
