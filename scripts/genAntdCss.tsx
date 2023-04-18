@@ -1,13 +1,16 @@
 import {extractStyle} from '@ant-design/static-style-extract';
-// @ts-ignore
 import fs from 'fs';
 import React from "react";
 import {ConfigProvider} from 'antd';
+import pkg from '../node_modules/antd/package.json';
+import theme from '../theme';
 
-const outputPath = './public/antd.min.css';
+const outputPath = `./public/antd.${pkg.version}.min.css`;
 
-const css = extractStyle(node => <>
-    <ConfigProvider theme={{hashed: false, token: {colorPrimary: '#262626'}}}>{node}</ConfigProvider>
-</>);
+// @ts-ignore
+const css = extractStyle((node) => <ConfigProvider theme={{
+    hashed: false,
+    token: theme
+}}>{node}</ConfigProvider>);
 
 fs.writeFileSync(outputPath, css);

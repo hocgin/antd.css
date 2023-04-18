@@ -3,9 +3,11 @@
     "strictNullChecks": true,
     "module": "NodeNext",
     "jsx": "react",
+    "resolveJsonModule": true,
     "esModuleInterop": true
   },
   "include": [
+    "**/*.json",
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"

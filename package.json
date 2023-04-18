@@ -13,7 +13,7 @@
   "dependencies": {
     "@ant-design/static-style-extract": "^1.0.1",
     "@types/node": "^18.15.11",
-    "antd": "^5.3.3",
+    "antd": "^5.4.2",
     "react": "18.x",
     "react-dom": "18.x",
     "ts-node": "^10.9.1",
