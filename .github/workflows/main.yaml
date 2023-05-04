@@ -17,7 +17,8 @@ jobs:
         id: pnpm-install
         with:
           version: 7
-          run_install: true
+          run_install: false
+      - run: pnpm install -f
       - run: npm run build
         env:
           NODE_OPTIONS: '--max_old_space_size=4096'
