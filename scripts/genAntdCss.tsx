@@ -6,8 +6,11 @@ import pkg from '../node_modules/antd/package.json';
 import theme from '../theme';
 
 const outputPath = `./public/antd.${pkg.version}.min.css`;
-let css = extractStyle((node) => <>
-    <ConfigProvider theme={{hashed: false, token: theme}}>{node}</ConfigProvider>
-</>);
-fs.rmSync(outputPath);
+const css = extractStyle((node) => <ConfigProvider theme={{
+    hashed: false,
+    token: theme
+}}>{node}</ConfigProvider>);
+if (fs.existsSync(outputPath)) {
+    fs.rmSync(outputPath);
+}
 fs.writeFileSync(outputPath, css);
